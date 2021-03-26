@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> ch 10_to_14_A Js Assignment</title>
+    <script>
+        var num1 = Number(prompt("Enter 1st subject(JavaScript) number out of 100"))
+        var num2 = Number(prompt("Enter 2nd(Python Language) subject number out of 100"))
+        var num3 = Number(prompt("Enter 3rd(Rust language) subject number out of 100"))
+        var num4 = Number(prompt("Enter 4th(Kubernetes) subject number ou of 100"))
+        var num5 = Number(prompt("Enter 5th(Pandas Liberary) subject number out of 100"))
+        var total_marks = 500
+        var obtain_marks = num1 + num2 + num3 + num4 + num5
+        var result = obtain_marks * 100 / total_marks
+        var grade = obtain_marks * 10 / total_marks
+        grade = Math.round(grade)
+        switch (grade) {
+            case 9:
+            case 10:
+                alert(`Your percentage is ${result} and Grad is A+`);
+                break;
+            case 8:
+                alert(`Your percentage is ${result} and Grad is A`);
+                break;
+            case 7:
+                alert(`Your percentage is ${result} and Grad is B`);
+                break;
+            case 6:
+                alert(`Your percentage is ${result} and Grad is C`);
+                break;
+            case 5:
+                alert(`Your percentage is ${result} and Grad is D`);
+                break;
+            case 4:
+                alert(`Your percentage is ${result} and Grad is E`)
+            default:
+                alert(`Your percentage is ${result} and Grad is F`);
+                break;
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

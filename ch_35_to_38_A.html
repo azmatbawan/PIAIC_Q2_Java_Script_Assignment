@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> ch 35_to_38_A Js Assignment</title>
+    <script>
+        var inputValue = prompt("Enter any sentence wih out capital case.")
+
+        function capitilize(input) {
+            input = input.split(" ");
+            var cap = '';
+            for (i = 0; i < input.length; i++) {
+                cap = cap.concat(' ', input[i].replace(input[i].charAt(0), input[i].charAt(0).toUpperCase()))
+            };
+            return cap;
+        }
+
+        var result = capitilize(inputValue)
+        console.log(result)
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

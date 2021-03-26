@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> ch 31_to_34 Js Assignment</title>
+    <script>
+        //Getting input
+        var name = prompt("Enter your Full Name")
+        var date = Number(prompt("Enter BOD(date) ", "for example 25"))
+        var month = Number(prompt("Enter BOD(month) ", "for example 03"))
+        var year = Number(prompt("Enter BOD(full year) ", "for example 2021"))
+            // Good morning
+        console.log(` Hello ${name} , Good Morning.`)
+            //setting age in year, month, days, hours,minutes and seconds
+        var dob = new Date()
+        dob.setDate(date)
+        dob.setMonth(month - 1)
+        dob.setYear(year)
+        console.log(`Your DOB is ${dob}`)
+        currentDate = new Date()
+        var ms = currentDate.getTime() - dob.getTime()
+        var s = ms / 1000
+        var sd = Math.floor(s % 60)
+        var m = (s - sd) / 60
+        var md = Math.floor(m % 60)
+        var h = (m - md) / 60
+        var hd = Math.floor(h % 24)
+        var d = (h - hd) / 24
+        var y = Math.floor(d / 365)
+        var dd = Math.floor((d % 365) % 30)
+        var mn = Math.floor((d % 365) / 30)
+        console.log(` "You are ${y} years ${mn} Month ${dd} Days ${hd} Hours ${md} Minutes ${sd} Seconds old"`)
+
+        // Age in Days
+        days = ms / (1000 * 60 * 60 * 24)
+        console.log(`Your age in Days is ${Math.round(days)}`)
+
+        // geting remaining month and days in Birth Day.
+        if (dob.getMonth() == currentDate.getMonth() && dob.getDate() == currentDate.getDate()) {
+            console.log(`congradulations ${name}, Today is your Birth Day.`);
+        } else {
+            if (dob.getMonth() > currentDate.getMonth()) {
+                if (dob.getDate() > currentDate.getDate()) {
+                    console.log(`How much time left in your next birth day? ${dob.getMonth()-currentDate.getMonth()} Months and ${dob.getDate()-currentDate.getDate()} Days`)
+                }
+                if (dob.getDate() < currentDate.getDate()) {
+                    console.log(`How much time left in your next birth day? ${dob.getMonth()-currentDate.getMonth()} Months and ${30-currentDate.getDate()+dob.getDate()} Days`)
+                }
+                if (dob.getDate() == currentDate.getDate()) {
+                    console.log(`How much time left in your next birth day? ${dob.getMonth()-currentDate.getMonth()} Months`)
+                }
+            }
+            if (dob.getMonth() < currentDate.getMonth()) {
+                if (dob.getDate() > currentDate.getDate()) {
+                    console.log(`How much time left in your next birth day? ${12-currentDate.getMonth()+dob.getMonth()} Months and ${dob.getDate()-currentDate.getDate()} Days`)
+                }
+                if (dob.getDate() < currentDate.getDate()) {
+                    console.log(`How much time left in your next birth day? ${12-currentDate.getMonth()+dob.getMonth()} Months and ${30-currentDate.getDate()+dob.getDate()} Days`)
+                }
+                if (dob.getDate() == currentDate.getDate()) {
+                    console.log(`How much time left in your next birth day? ${12-currentDate.getMonth()+dob.getMonth()} Months`)
+                }
+            }
+            if (dob.getMonth() == currentDate.getMonth()) {
+                if (dob.getDate() > currentDate.getDate()) {
+                    console.log(`How much time left in your next birth day? ${dob.getDate()-currentDate.getDate()} Days`)
+                }
+                if (dob.getDate() < currentDate.getDate()) {
+                    console.log(`How much time left in your next birth day? ${30-currentDate.getDate()+dob.getDate()} Days`)
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

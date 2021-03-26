@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> ch 21_to_23_B Js Assignment</title>
+    <script>
+        var input = prompt("Enter any sentence wih out capital case.")
+        input = input.split(" ")
+        var inputValue = ''
+        for (i = 0; i < input.length; i++) {
+            inputValue = inputValue.concat(' ', input[i].replace(input[i].charAt(0), input[i].charAt(0).toUpperCase()))
+        }
+        console.log(inputValue)
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
